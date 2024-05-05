@@ -1,30 +1,23 @@
 public class Solution
 {
-    public int RemoveElement(int[] nums, int val)
+    public int RemoveDuplicates(int[] nums)
     {
-
-        int j = 0;
+        int uniqueElements = 0;
         /*
-        * Loop through the input array
-        * If the value at index i == val
-        *   contiune
-        * If value at index i does not equal val
-        *   insert it at the position of i
-        *  Return the number of value in the new updated array.
-        *
+        * Loop through the array and check if index i and index i+1 are equal. 
+        * If index i == index i + 1 continue through the loop 
+        * Replace the element at i with uniqueElements and then increment uniqueElements
         */
+
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] == val)
+            if (i < nums.Length - 1 && nums[i] == nums[i + 1])
             {
                 continue;
             }
-            else
-            {
-                nums[j] = nums[i];
-                j++;
-            }
+            nums[uniqueElements] = nums[i];
+            uniqueElements++;
         }
-        return j;
+        return uniqueElements;
     }
 }

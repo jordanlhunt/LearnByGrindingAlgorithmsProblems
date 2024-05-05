@@ -2,6 +2,7 @@ public class Solution
 {
     public int RemoveElement(int[] nums, int val)
     {
+
         int j = 0;
         /*
         * Loop through the input array
@@ -12,7 +13,7 @@ public class Solution
         *  Return the number of value in the new updated array.
         *
         */
-        for (int i = 0; i < nums.Length - 1; i++)
+        for (int i = 0; i < nums.Length; i++)
         {
             if (nums[i] == val)
             {
